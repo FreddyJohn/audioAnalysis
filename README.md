@@ -1,5 +1,5 @@
 # audioAnalysis
-I am writing audio app for Android/iOS and doing research in python. There is ALOT of information on dsp stuff if you go looking. here is some juicy bits in python
+I am writing audio app for Android/iOS and doing research in python. There is ALOT of information on dsp stuff if you go looking. here is some juicy bits in python. This is not a library right now because I want everything decoupled so it's instantly digestible to the reader. If you've been playing with audio you might also share my distain for plugins
 
 Extremely helpful formal defintions and visualizations of audio effects:
 
