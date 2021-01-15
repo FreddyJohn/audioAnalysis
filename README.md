@@ -3,7 +3,7 @@ I am writing audio app for Android/iOS and doing research in python. There is AL
 
 Extremely helpful formal defintions and visualizations of audio effects:
 
-LFO math used for phaser -> https://www.desmos.com/calculator/9exs01vhv0 
+LFO math used for phaser -> https://www.desmos.com/calculator/yjxhr77zlw
 
 Flanger effect math -> https://www.desmos.com/calculator/mfannhpisz
 
