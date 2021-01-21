@@ -9,3 +9,4 @@ Flanger effect math -> https://www.desmos.com/calculator/mfannhpisz
 
 Additive synthesis primitives -> https://www.desmos.com/calculator/7hpgakivcz
 
+Quantization math -> https://www.desmos.com/calculator/l86awsjfmr
