@@ -1,6 +1,28 @@
 """
 Parameterized Digital Distortion effect
 applied to primitive waveform
+
+
+d = v * [ x / |x| * ( c - e^( a * ( x^p/|x| )  )  )  ]
+
+v = volume {1<=v<=dtype.MAX}
+
+c = any constant {dtype.MIN<=v<=dtype.MAX}
+
+a = effect amplitude -->
+                                             a!=p or p!=a
+p = distortion power {2<=p<=dtype.MAX} -->
+    
+x = input waveform
+
+d = digital distortion applied to input waveform
+
+sr = sample rate
+
+f = frequency {1<=f<=sr//2}
+
+l = length in seconds
+
 """
 
 from matplotlib import pyplot as plt
@@ -10,19 +32,22 @@ import math
 
 sr=48000
 l=5
-f=4782
-p=9.1
-a=1
+f=15000
+p=9
+a=math.pi
 v=5000
-
+c=math.pi
 filename="digitalDistortion.wav"
 
-# generate waveform
+# generate input waveform
 t=np.linspace(0,l,sr*l)
 y=np.sin(f*t)
 
+plt.plot(y)
+plt.show()
+
 # apply parameterized distortion effect
-dd=v*(y/np.abs(y))*(1-np.exp(a*(pow(y,p)/np.abs(y))))
+dd=v*(y/np.abs(y))*(c-np.exp(a*(pow(y,p)/np.abs(y))))
 
 #convert to 16bit
 dd=dd.astype(np.short)
