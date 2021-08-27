@@ -16,8 +16,8 @@ def mix(s1,s2):
     mixed=[]
     for i in range(len(s1)):
         s=(s1[i]+s2[i])
-        mixed.append(s)
-    return np.array(mixed).tobytes()  
+        mixed.append(int(s)//2)
+    return pack('h'*len(s1),*mixed) 
 
 def fit(s1,s2):
     if len(s1)>len(s2):
